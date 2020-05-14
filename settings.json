@@ -1,0 +1,73 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "editor.rulers": [
+    72,
+    79,
+    120
+  ],
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "svelte": "html",
+    "vue-html": "html",
+    "vue": "html"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    ".vscode": true,
+    "**/*.pyc": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/venv/**": true
+  },
+  "workbench.editor.enablePreview": false,
+  "files.autoSave": "onFocusChange",
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "workbench.activityBar.visible": true,
+  "window.title": "${dirty}${rootName}",
+  "window.openFoldersInNewWindow": "on",
+  "window.newWindowDimensions": "maximized",
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false,
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "terminal.integrated.rendererType": "dom",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/venv/**": true
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "git.enableSmartCommit": true,
+  "workbench.editor.showTabs": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.enabled": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": false,
+  "go.formatTool": "gofmt",
+  "go.autocompleteUnimportedPackages": true,
+  "go.buildOnSave": "off",
+  "[go]": {
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
+  },
+  "python.jediEnabled": false,
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "workbench.colorTheme": "Monokai",
+  "telemetry.enableTelemetry": false
+}
