@@ -1,13 +1,19 @@
 {
   "workbench.iconTheme": "vscode-icons",
-  "python.dataScience.sendSelectionToInteractiveWindow": true,
   "editor.rulers": [
-    80,
-    120
+    110
   ],
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   // these two are to fix "invisible _ in console" problem
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.fontFamily": "Ubuntu mono",
+  // "terminal.integrated.fontSize": 16,
+  // "terminal.integrated.fontFamily": "Ubuntu mono",
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
   "emmet.triggerExpansionOnTab": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -29,7 +35,11 @@
     "**/venv/**": true
   },
   "files.associations": {
-    "**/*.yml": "ansible"
+    "**/*.yml": "ansible",
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
   },
   "workbench.editor.enablePreview": false,
   "files.autoSave": "afterDelay",
@@ -38,7 +48,7 @@
   "editor.minimap.renderCharacters": false,
   "workbench.activityBar.visible": true,
   "window.title": "${dirty}${rootName}",
-  "window.openFoldersInNewWindow": "on",
+  //"window.openFoldersInNewWindow": "on",
   "window.newWindowDimensions": "maximized",
   "editor.quickSuggestions": {
     // "other": false,
@@ -56,29 +66,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "git.enableSmartCommit": true,
   "workbench.editor.showTabs": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pycodestyleEnabled": true,
-  "python.linting.enabled": true,
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
-  "editor.formatOnSave": true,
-  "go.formatTool": "gofmt",
-  "go.autocompleteUnimportedPackages": true,
-  "go.buildOnSave": "off",
-  "[go]": {
-    "editor.formatOnSave": false,
-    "editor.tabSize": 4
-  },
-  "python.jediEnabled": false,
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "editor.rulers": [
-      72,
-      79,
-      120
-    ]
-  },
   "workbench.colorTheme": "One Dark Pro",
   "telemetry.enableTelemetry": false,
   "yaml.schemas": {
@@ -87,7 +74,32 @@
     ]
   },
   "window.zoomLevel": 0,
-  "python.languageServer": "Microsoft",
-  "liveServer.settings.donotVerifyTags": true,
-  "liveServer.settings.donotShowInfoMsg": true
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  // python
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.rulers": [
+      72,
+      79,
+      110
+    ]
+  },
+  "python.linting.pylintEnabled": true,
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.enabled": true,
+  "python.languageServer": "Pylance",
+  // python -- end
+  // go
+  "go.formatTool": "gofmt",
+  "go.autocompleteUnimportedPackages": true,
+  "go.buildOnSave": "off",
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "go.useLanguageServer": true,
+  // go -- end
 }
