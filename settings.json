@@ -1,7 +1,7 @@
 {
   "workbench.iconTheme": "vscode-icons",
   "editor.rulers": [
-    110
+    100
   ],
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
@@ -84,11 +84,14 @@
     "editor.rulers": [
       72,
       79,
-      110
+      100
     ]
   },
   "python.linting.pylintEnabled": true,
   "python.linting.pycodestyleEnabled": true,
+  "python.linting.pycodestyleArgs": [
+    "--ignore=E501"
+  ],
   "python.linting.enabled": true,
   "python.languageServer": "Pylance",
   // python -- end
@@ -100,6 +103,19 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
-  "go.useLanguageServer": true,
+  "go.useLanguageServer": false,
   // go -- end
+  "[ruby]": {
+    // for exercism code window
+    "editor.rulers": [
+      63,
+      100
+    ]
+  },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ]
 }
