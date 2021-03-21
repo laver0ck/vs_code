@@ -47,7 +47,7 @@
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
   "workbench.activityBar.visible": true,
-  "window.title": "${dirty}${rootName}",
+  "window.title": "${dirty}${activeEditorShort}${separator}${activeEditorMedium}${separator}${rootName}",
   //"window.openFoldersInNewWindow": "on",
   "window.newWindowDimensions": "maximized",
   "editor.quickSuggestions": {
