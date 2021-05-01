@@ -1,16 +1,17 @@
 {
   "workbench.iconTheme": "vscode-icons",
   "editor.rulers": [
-    100
+    120
   ],
-  "editor.renderWhitespace": "all",
+  "editor.fontFamily": "Cascadia Code PL",
+  "editor.fontLigatures": true,
+  // "editor.renderWhitespace": "all",
+  "terminal.integrated.fontFamily": "RobotoMono NF",
+  "terminal.integrated.fontSize": 13,
   "editor.renderControlCharacters": true,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  // these two are to fix "invisible _ in console" problem
-  // "terminal.integrated.fontSize": 16,
-  // "terminal.integrated.fontFamily": "Ubuntu mono",
   "emmet.includeLanguages": {
     "django-html": "html"
   },
@@ -56,7 +57,7 @@
     "strings": false,
   },
   "workbench.startupEditor": "newUntitledFile",
-  "terminal.integrated.rendererType": "dom",
+  // "terminal.integrated.rendererType": "dom",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -81,16 +82,24 @@
   "[python]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
-    "editor.rulers": [
-      72,
-      79,
-      100
-    ]
+    // "editor.rulers": [
+    //   72,
+    //   79,
+    //   120
+    // ]
   },
+  "python.formatting.autopep8Args": [
+    "--max-line-length=120"
+  ],
   "python.linting.pylintEnabled": true,
   "python.linting.pycodestyleEnabled": true,
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
+  ],
   "python.linting.pycodestyleArgs": [
-    "--ignore=E501"
+    "--ignore=E501",
+    // "--load-plugins=pylint_django,pylint_celery",
   ],
   "python.linting.enabled": true,
   "python.languageServer": "Pylance",
@@ -108,8 +117,7 @@
   "[ruby]": {
     // for exercism code window
     "editor.rulers": [
-      63,
-      100
+      63
     ]
   },
   "workbench.editorAssociations": [
@@ -117,5 +125,16 @@
       "viewType": "jupyter.notebook.ipynb",
       "filenamePattern": "*.ipynb"
     }
-  ]
+  ],
+  "python.linting.pylintPath": "pylint_django",
+  "tws.highlightTrailingWhiteSpace": true,
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "prettier.singleQuote": true,
+  // "prettier.printWidth": 120,
+  // "[json]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "explorer.confirmDragAndDrop": false,
 }
