@@ -1,10 +1,10 @@
 {
   "workbench.iconTheme": "vscode-icons",
-  "editor.rulers": [
-    120
-  ],
-  "editor.fontFamily": "Cascadia Code PL",
+  "editor.rulers": [120],
   "editor.fontLigatures": true,
+  "workbench.colorCustomizations": {
+    // "editor.background": "#ffffff"
+  },
   // "editor.renderWhitespace": "all",
   "terminal.integrated.fontFamily": "RobotoMono NF",
   "terminal.integrated.fontSize": 13,
@@ -12,15 +12,19 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
   "emmet.includeLanguages": {
     "django-html": "html"
   },
   "emmet.triggerExpansionOnTab": true,
   "emmet.syntaxProfiles": {
-    "javascript": "jsx",
-    "svelte": "html",
-    "vue-html": "html",
-    "vue": "html"
+    "javascript": "jsx"
+    // "svelte": "html",
+    // "vue-html": "html",
+    // "vue": "html"
   },
   "files.exclude": {
     "**/.git": true,
@@ -36,28 +40,25 @@
     "**/venv/**": true
   },
   "files.associations": {
-    "**/*.yml": "ansible",
     "**/*.html": "html",
     "**/templates/**/*.html": "django-html",
     "**/templates/**/*": "django-txt",
-    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
   },
   "workbench.editor.enablePreview": false,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 10000,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
-  "workbench.activityBar.visible": true,
   "window.title": "${dirty}${activeEditorShort}${separator}${activeEditorMedium}${separator}${rootName}",
   //"window.openFoldersInNewWindow": "on",
   "window.newWindowDimensions": "maximized",
   "editor.quickSuggestions": {
     // "other": false,
     "comments": false,
-    "strings": false,
+    "strings": false
   },
   "workbench.startupEditor": "newUntitledFile",
-  // "terminal.integrated.rendererType": "dom",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -67,45 +68,46 @@
   "vsicons.dontShowNewVersionMessage": true,
   "git.enableSmartCommit": true,
   "workbench.editor.showTabs": true,
+  "workbench.editor.untitled.hint": "hidden",
   "workbench.colorTheme": "One Dark Pro",
-  "telemetry.enableTelemetry": false,
-  "yaml.schemas": {
-    "Kubernetes": [
-      "*.yaml"
-    ]
-  },
-  "window.zoomLevel": 0,
+  "telemetry.telemetryLevel": "off",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
+  "tws.highlightTrailingWhiteSpace": true,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
   // python
   "[python]": {
     "editor.insertSpaces": true,
-    "editor.tabSize": 4,
+    "editor.tabSize": 4
     // "editor.rulers": [
     //   72,
     //   79,
     //   120
     // ]
   },
-  "python.formatting.autopep8Args": [
-    "--max-line-length=120"
-  ],
+  "python.formatting.autopep8Args": ["--max-line-length=120"],
   "python.linting.pylintEnabled": true,
-  "python.linting.pycodestyleEnabled": true,
-  "python.linting.pylintArgs": [
-    "--load-plugins",
-    "pylint_django",
-  ],
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
   "python.linting.pycodestyleArgs": [
-    "--ignore=E501",
+    "--ignore=E501"
     // "--load-plugins=pylint_django,pylint_celery",
   ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
   "python.linting.enabled": true,
+  "python.linting.pylintPath": "pylint_django",
   "python.languageServer": "Pylance",
   // python -- end
   // go
-  "go.formatTool": "gofmt",
+  "go.formatTool": "goimports",
   "go.autocompleteUnimportedPackages": true,
   "go.buildOnSave": "off",
   "[go]": {
@@ -114,27 +116,18 @@
   },
   "go.useLanguageServer": false,
   // go -- end
-  "[ruby]": {
-    // for exercism code window
-    "editor.rulers": [
-      63
-    ]
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "security.workspace.trust.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
-  "python.linting.pylintPath": "pylint_django",
-  "tws.highlightTrailingWhiteSpace": true,
-  // "[javascript]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  // "prettier.singleQuote": true,
-  // "prettier.printWidth": 120,
-  // "[json]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "prettier.singleQuote": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.unicodeHighlight.includeStrings": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false
 }
